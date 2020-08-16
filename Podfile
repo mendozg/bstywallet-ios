@@ -7,11 +7,13 @@ use_frameworks!
 
 #Shared Cocopods
 def shared_pods
-  pod 'Alamofire', '~> 4.7'
+  pod 'Alamofire', '~> 5.2'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'CryptoSwift', '~> 1.0'
   pod 'Firebase/Crashlytics' 
   pod 'Firebase/Analytics'
+
+  pod 'CNIntegration', :git => 'https://github.com/ChangeNOW-lab/ChangeNow_Integration_iOS.git', :tag => '0.1.1'
 
   # add after v2.6.0 pod 'SwiftLint'
 end
