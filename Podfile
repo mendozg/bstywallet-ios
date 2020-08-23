@@ -4,7 +4,6 @@ workspace 'loafwallet.xcworkspace'
 project 'loafwallet.xcodeproj', 'Debug' => :debug,'Release' => :release
 use_frameworks!
 
-
 #Shared Cocopods
 def shared_pods
   pod 'Alamofire', '~> 4.7'
@@ -24,10 +23,6 @@ target 'loafwallet' do
   shared_pods
   
   target 'loafwalletTests' do
-    inherit! :search_paths
-  end
-  
-  target 'loafwalletUITests' do
     inherit! :search_paths
   end
   

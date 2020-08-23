@@ -41,15 +41,6 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "75A2A7B71DA5934300A983D8"
-            BuildableName = "loafwallet WatchKit App.app"
-            BlueprintName = "loafwallet WatchKit App"
-            ReferencedContainer = "container:loafwallet.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -96,7 +87,7 @@
       <RemoteRunnable
          runnableDebuggingMode = "2"
          BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/LoafWallet">
+         RemotePath = "/Litewallet">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "75A2A7B71DA5934300A983D8"
@@ -115,7 +106,7 @@
       <RemoteRunnable
          runnableDebuggingMode = "2"
          BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/LoafWallet">
+         RemotePath = "/Litewallet">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "75A2A7B71DA5934300A983D8"
