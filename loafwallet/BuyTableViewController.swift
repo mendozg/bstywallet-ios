@@ -11,7 +11,7 @@ import UIKit
 class BuyTableViewController: UITableViewController {
     
     private var currencyCode: String = "USD"
-    
+ 
     @IBAction func didTapSimplex(_ sender: Any) {
         
         if let vcWKVC = UIStoryboard.init(name: "Buy", bundle: nil).instantiateViewController(withIdentifier: "BuyWKWebViewController") as? BuyWKWebViewController {
@@ -42,6 +42,17 @@ class BuyTableViewController: UITableViewController {
         thinHeaderView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 1.0)
         thinHeaderView.backgroundColor = .white
         tableView.tableHeaderView = thinHeaderView
+        
+        
+        // TODO: Remove when Simplex or any partner is ready for operations
+        let comingSoonLabel = UILabel()
+        comingSoonLabel.textAlignment = .center
+        comingSoonLabel.textColor = .white
+        comingSoonLabel.font = UIFont.barlowBold(size: 20)
+        comingSoonLabel.text = S.BuyCenter.comingSoon
+        
+        tableView.backgroundView = comingSoonLabel
+        
         tableView.tableFooterView = UIView()
         
         LWAnalytics.logEventWithParameters(itemName: ._20191105_DTBT)
