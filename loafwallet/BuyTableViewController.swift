@@ -8,15 +8,7 @@
 
 import UIKit
 
-class BuyTableViewController: UITableViewController { 
-     
-    @IBOutlet weak var simplexLogoImageView: UIImageView!
-    @IBOutlet weak var simplexHeaderLabel: UILabel!
-    @IBOutlet weak var simplexDetailsLabel: UILabel!
-    @IBOutlet weak var simplexCellContainerView: UIView!
-    
-    @IBOutlet weak var chooseFiatLabel: UILabel!
-    @IBOutlet weak var currencySegmentedControl: UISegmentedControl!
+class BuyTableViewController: UITableViewController {
     
     private var currencyCode: String = "USD"
     
@@ -39,7 +31,7 @@ class BuyTableViewController: UITableViewController {
             NSLog("ERROR: Storyboard not initialized")
         }
     }
- 
+    
     var store: Store?
     var walletManager: WalletManager?
     let mountPoint = ""
@@ -52,27 +44,16 @@ class BuyTableViewController: UITableViewController {
         tableView.tableHeaderView = thinHeaderView
         tableView.tableFooterView = UIView()
         
-        currencySegmentedControl.addTarget(self, action: #selector(didChangeCurrency), for: .valueChanged)
-        currencySegmentedControl.selectedSegmentIndex = PartnerFiatOptions.usd.index
+        LWAnalytics.logEventWithParameters(itemName: ._20191105_DTBT)
         setupData()
     }
     
     private func setupData() {
-        let simplexData = Partner.partnerDataArray()[0]
-        simplexLogoImageView.image = simplexData.logo
-        simplexHeaderLabel.text = simplexData.headerTitle
-        simplexDetailsLabel.text = simplexData.details
-        simplexCellContainerView.layer.cornerRadius = 6.0
-        simplexCellContainerView.layer.borderColor = UIColor.white.cgColor
-        simplexCellContainerView.layer.borderWidth = 1.0
-        simplexCellContainerView.clipsToBounds = true
         
-        chooseFiatLabel.text = S.DefaultCurrency.chooseFiatLabel
     }
     
     @objc private func didChangeCurrency() {
-        if let code = PartnerFiatOptions(rawValue: currencySegmentedControl.selectedSegmentIndex)?.description {
-            self.currencyCode = code
-        }
+        
     }
 }
+
